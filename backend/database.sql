@@ -39,10 +39,7 @@ CREATE TABLE IF NOT EXISTS products (
   CONSTRAINT fk_product_category FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE RESTRICT
 );
 
--- Performance indexes for fast product listing
-CREATE INDEX IF NOT EXISTS idx_products_created_at    ON products (created_at DESC);
-CREATE INDEX IF NOT EXISTS idx_products_category_id   ON products (category_id);
-CREATE INDEX IF NOT EXISTS idx_products_name_brand    ON products (name, brand);
+-- Indexes are defined inline in CREATE TABLE above for MySQL 5.7+ compatibility
 
 -- ============================================================
 -- TABLE: cart
