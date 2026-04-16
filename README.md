@@ -2,6 +2,13 @@
 
 A full-stack e-commerce platform replicating Flipkart's design and functionality, built as part of the SDE Intern Fullstack Assignment.
 
+## 🔗 Submission Links
+
+| | Link |
+|---|---|
+| **🌐 Live Demo** | https://flipkart-clone-production-1f0e.up.railway.app |
+| **📁 GitHub Repo** | https://github.com/Rav-spec/flipkart-clone |
+
 ---
 
 ## 🚀 Tech Stack
