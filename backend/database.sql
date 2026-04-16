@@ -40,9 +40,9 @@ CREATE TABLE IF NOT EXISTS products (
 );
 
 -- Performance indexes for fast product listing
-CREATE INDEX IF NOT EXISTS idx_products_created_at    ON products (created_at DESC);
-CREATE INDEX IF NOT EXISTS idx_products_category_id   ON products (category_id);
-CREATE INDEX IF NOT EXISTS idx_products_name_brand    ON products (name, brand);
+CREATE INDEX IF NOT EXISTS idx_products_created_at ON products (created_at);
+CREATE INDEX IF NOT EXISTS idx_products_category_id ON products (category_id);
+CREATE INDEX IF NOT EXISTS idx_products_name_brand ON products (name, brand);
 
 -- ============================================================
 -- TABLE: cart
