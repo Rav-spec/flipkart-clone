@@ -11,7 +11,7 @@ const mysql = require('mysql2/promise');
 const fs = require('fs');
 const path = require('path');
 
-const { DB_HOST, DB_USER, DB_PASSWORD } = process.env;
+const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD } = process.env;
 
 async function setup() {
   console.log('\n🔧  Flipkart Clone — Database Setup');
@@ -21,8 +21,9 @@ async function setup() {
   try {
     // Connect WITHOUT specifying a database first
     connection = await mysql.createConnection({
-      host: DB_HOST || 'localhost',
-      user: DB_USER || 'root',
+      host:     DB_HOST     || 'localhost',
+      port:     DB_PORT     || 3306,
+      user:     DB_USER     || 'root',
       password: DB_PASSWORD || '',
       multipleStatements: true,
     });

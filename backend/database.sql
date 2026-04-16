@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS order_items (
 -- ============================================================
 -- SEED: categories
 -- ============================================================
-INSERT INTO categories (name, slug, icon) VALUES
+INSERT IGNORE INTO categories (name, slug, icon) VALUES
 ('Electronics', 'electronics', '📱'),
 ('Fashion', 'fashion', '👕'),
 ('Home & Furniture', 'home-furniture', '🛋️'),
@@ -120,7 +120,7 @@ INSERT INTO categories (name, slug, icon) VALUES
 -- ============================================================
 -- SEED: products
 -- ============================================================
-INSERT INTO products (category_id, name, description, specifications, price, discount_percent, stock, brand, images, rating, review_count) VALUES
+INSERT IGNORE INTO products (category_id, name, description, specifications, price, discount_percent, stock, brand, images, rating, review_count) VALUES
 
 -- Electronics
 (1, 'Samsung Galaxy S24 Ultra',
