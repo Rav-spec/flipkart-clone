@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables — NEVER commit these
+.env
+backend/.env
+
+# Build output
+frontend/build/
+frontend/.env.local
+frontend/.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Temp / debug scripts (not needed in production)
+backend/fix-images.js
+backend/test-api.js
+backend/verify-images.js
