@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const API = axios.create({
-  // Production: set REACT_APP_API_URL to your Render backend URL
-  // Development: proxied to localhost:5000 via package.json proxy
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
+  // Relative path works on Railway (same server serves frontend + backend)
+  // Dev proxy in frontend/package.json forwards /api → localhost:5000
+  baseURL: process.env.REACT_APP_API_URL || '/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
